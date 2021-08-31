@@ -1,5 +1,5 @@
 #include <RcppArmadillo.h>
-#include <gperftools/profiler.h>
+// #include <gperftools/profiler.h>
 
 using namespace Rcpp;
 // using namespace arma;
@@ -7,12 +7,12 @@ using namespace Rcpp;
 // #include <Rcpp.h>
 // using namespace std;
 
-// [[Rcpp::export]]
-arma::vec getEigenValues(arma::mat M) {
-    ProfilerStart("./eigen-prof.log");
-    return arma::eig_sym(M);
-    ProfilerStop();
-}
+// // [[Rcpp::export]]
+// arma::vec getEigenValues(arma::mat M) {
+//     ProfilerStart("./eigen-prof.log");
+//     return arma::eig_sym(M);
+//     ProfilerStop();
+// }
 
 // [[Rcpp::export]]
 NumericVector arrayC(NumericVector input, IntegerVector dim) {

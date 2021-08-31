@@ -11,17 +11,6 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// getEigenValues
-arma::vec getEigenValues(arma::mat M);
-RcppExport SEXP _hello_R_getEigenValues(SEXP MSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type M(MSEXP);
-    rcpp_result_gen = Rcpp::wrap(getEigenValues(M));
-    return rcpp_result_gen;
-END_RCPP
-}
 // arrayC
 NumericVector arrayC(NumericVector input, IntegerVector dim);
 RcppExport SEXP _hello_R_arrayC(SEXP inputSEXP, SEXP dimSEXP) {
@@ -48,7 +37,6 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_hello_R_getEigenValues", (DL_FUNC) &_hello_R_getEigenValues, 1},
     {"_hello_R_arrayC", (DL_FUNC) &_hello_R_arrayC, 2},
     {"_hello_R_arr3d", (DL_FUNC) &_hello_R_arr3d, 3},
     {NULL, NULL, 0}
