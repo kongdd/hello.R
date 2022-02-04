@@ -9,3 +9,7 @@ arr3d <- function(forcing_3d, soil_par_mat, forcing_veg_list) {
     invisible(.Call(`_hello_R_arr3d`, forcing_3d, soil_par_mat, forcing_veg_list))
 }
 
+guess_filedNames <- function() {
+    .Call(`_hello_R_guess_filedNames`)
+}
+

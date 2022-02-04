@@ -21,7 +21,6 @@ NumericVector arrayC(NumericVector input, IntegerVector dim) {
     return input;
 }
 
-
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
 void arr3d(arma::cube forcing_3d, NumericMatrix soil_par_mat,

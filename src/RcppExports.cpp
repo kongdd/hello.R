@@ -35,10 +35,21 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// guess_filedNames
+Rcpp::CharacterVector guess_filedNames();
+RcppExport SEXP _hello_R_guess_filedNames() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(guess_filedNames());
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_hello_R_arrayC", (DL_FUNC) &_hello_R_arrayC, 2},
     {"_hello_R_arr3d", (DL_FUNC) &_hello_R_arr3d, 3},
+    {"_hello_R_guess_filedNames", (DL_FUNC) &_hello_R_guess_filedNames, 0},
     {NULL, NULL, 0}
 };
 
